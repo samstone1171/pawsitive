@@ -118,7 +118,7 @@ mike = Pet.create!(
   description: "He is a typical bull dog. Always having fun playing with balls.",
   price_per_day: 6000,
 )
-file = File.open(Rails.root.join("app/assets/images/pets/Mike.jpeg"))
+file = File.open(Rails.root.join("app/assets/images/pets/Mike.jpg"))
 mike.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 hanako = Pet.create!(
