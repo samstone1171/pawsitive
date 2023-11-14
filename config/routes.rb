@@ -4,5 +4,14 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-
+  resource :account, only: [:show]
+  resources :pets, only: [:new, :show, :create, :index] do
+    resources :rentals, only: [:create]
+  end
+  resources :rentals, only: [:index] do
+    member do
+      patch :accept
+      patch :decline
+    end
+  end
 end
