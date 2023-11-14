@@ -1,0 +1,27 @@
+form {
+  width: 50%; /* Set the desired width of your form */
+  margin: 0 auto; /* Center the form horizontally */
+  /* You can also add additional styles as needed */
+}
+
+/* Optional: Center the form vertically */
+.signupform {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.sign_up_button {
+  background-image: asset-url("logo.png");
+  background-size: 100%;
+  height: 90px;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 16px;
+}
