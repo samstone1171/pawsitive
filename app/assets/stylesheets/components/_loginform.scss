@@ -1,0 +1,16 @@
+form {
+  width: 50%; /* Set the desired width of your form */
+  margin: 0 auto; /* Center the form horizontally */
+  /* You can also add additional styles as needed */
+}
+/* Optional: Center the form vertically */
+.loginform {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+
+}
+.center {
+  text-align: center;
+}
