@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   def index
+    @pets = Pet.all
   end
 
   def new
@@ -9,5 +10,6 @@ class PetsController < ApplicationController
   end
 
   def show
+    raise
   end
 end
