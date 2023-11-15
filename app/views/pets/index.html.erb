@@ -1,10 +1,23 @@
-<div class="container">
-  <ul class="bg-pawsitive-orange"><% @pets.each do |pet| %>
-    <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key %>');"><%= pet.name %>
-      <%# <%= link_to , pet_path(pet) %>
-    </div>
+<div class="container pets-index-container"> <strong>21 pets near you</strong>
+<p></p>
+  <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
+
+    <%= link_to pet_path(pet) do %>
+      <div class="pet-cards-container">
+        <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key, crop: :thumb %>');">
+        </div>
+        <div class="card-pet-infos d-flex">
+          <div class="card-pet-desc">
+            <h2><%= pet.name %></h2>
+            <p><%= pet.life_stage %> <%= pet.species %></p>
+          </div>
+        <p class="card-pet-pricing">¥<%= pet.price_per_day %> per day</p>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pet-user avatar-bordered" />
+        </div>
+      </div>
     <% end %>
-  </ul>
+  <% end %>
+  </div>
 </div>
 
 <%# <div style="bakcground-image: url('http://res.cloudinary.com/.....')">
