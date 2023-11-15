@@ -2,6 +2,9 @@
   justify-content: space-between;
   background: $pawsitive-orange;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,7 +16,14 @@
 }
 
 .navbar-brand {
-  font-family: 'Salsa', cursive;
+  font-family: 'Salsa';
   font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  align-items: center;
+}
 
+.nav-link:hover {
+  border-bottom: 1px solid white;
 }
