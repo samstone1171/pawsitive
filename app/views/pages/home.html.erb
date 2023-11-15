@@ -1,37 +1,34 @@
-<h1>Pawsitive</h1>
-
-
-
-  <!-- code a Hero / Banner section -->
-  <div class="banner" style="background-image: url(<%= image_path("pets/Mike.jpg") %>);">
+<!-- code a Hero / Banner section -->
+  <div class="banner" style="background-image: url(<%= image_path("pets/britbull.jpg") %>);">
     <div class="container">
-      <h1>Borrow Joy, One Paw at a Time!!</h1>
+      <h1>Borrow joy, one paw at a time!</h1>
       <p></p>
-      <a class="btn-primary" href="#">Apply now!</a>
-    </div>
+      <%= link_to "Explore Pets", pets_path, class:"btn-primary btn-explore" %>
+      </div>
   </div>
 
   <!-- code a "How it works" section -->
   <div class="container">
-    <h2 class="text-center">How you can be pawsitive</h2>
+    <h2 class="text-center">How you can be Pawsitive:</h2>
     <div class="cards">
 
-      <div class="card">
-        <img src="images/apply.svg" alt="">
-        <h4>Look for the lovely partner</h4>
-        <p>Lots of buddy is waiting for you</p>
-      </div>
-
-      <div class="card">
+      <div class="card home">
         <img src="images/learn.svg" alt="">
-        <h4>Having a nice day with them</h4>
-        <p> You will have special day with them</p>
+        <h4>Explore our community</h4>
+        <p> Rent a furry friend and let the day unfold in a Pawsitively delightful adventure of companionship and joy!</p>
       </div>
 
-      <div class="card">
+      <div class="card home">
+        <img src="images/apply.svg" alt="">
+        <h4>Transform pets' lives</h4>
+        <p>Create your free account, explore our pet-loving community, and when you're ready, rent a pet.</p>
+      </div>
+
+
+      <div class="card home">
         <img src="images/product.svg" alt="">
-        <h4>Share experience and Build "Powsitive" community</h4>
-        <p>You change the world !! </p>
+        <h4>Be Pawsitive everyday</h4>
+        <p>Embark on a tail-wagging journey as your pet pal enjoys a day filled with love, play, and endless cuddles by your side! </p>
       </div>
 
     </div>
