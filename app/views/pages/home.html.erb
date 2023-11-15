@@ -1,11 +1,52 @@
-<!-- code a Hero / Banner section -->
-  <div class="banner" style="background-image: url(<%= image_path("pexels-tina-nord-7324407.jpg") %>);">
-    <div class="container">
-      <h1>Borrow joy, one paw at a time!</h1>
-      <p></p>
-      <%= link_to "Explore Pets", pets_path, class:"home-button btn-primary btn-explore" %>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+  <!-- Carousel inner -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag("puppies-carousel.jpg", class: 'd-block w-100') %>
+      <div class="carousel-caption">
+        <!-- Header and button inside the carousel item -->
+        <h1>Borrow joy, one paw at a time!</h1>
+        <button class="btn btn-primary">Your Button</button>
       </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("cats-carousel.jpg", class: 'd-block w-100') %>
+      <div class="carousel-caption">
+        <!-- Header and button inside the carousel item -->
+        <h1>Borrow joy, one paw at a time!</h1>
+        <button class="btn btn-primary">Your Button</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("turtles-carousel.jpg", class: 'd-block w-100') %>
+      <div class="carousel-caption">
+        <!-- Header and button inside the carousel item -->
+        <h1>Borrow joy, one paw at a time!</h1>
+        <button class="btn btn-primary">Your Button</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("rabbits-carousel.jpg", class: 'd-block w-100') %>
+      <div class="carousel-caption">
+        <!-- Header and button inside the carousel item -->
+        <h1>Borrow joy, one paw at a time!</h1>
+        <button class="btn btn-primary">Your Button</button>
+      </div>
+    </div>
   </div>
+
+  <!-- Carousel controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- code a Hero / Banner section -->
+
 
   <!-- code a "How it works" section -->
   <div class="container">
