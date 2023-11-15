@@ -2,8 +2,8 @@
   <h1 class="text-center m-4"> <%=@pet.name%> </h1>
   <div class="row">
   <div class="box-container">
-    <div class=" col col-md-6 image-box shadow-sm">
-      <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill, radius: 20 %>
+    <div class=" col col-md-6">
+    <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill, radius: 20 %>
     </div>
     <div class="col col-md-6 container-form">
       <h3> FORM </h3>
@@ -15,15 +15,15 @@
   <div class="details-container mt-5 mb-5">
     <div class="details">
       <% if @pet.gender == 'F'%>
-        <p> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Female <%= @pet.species%>. </p>
+        <p class="fw-bold fs-4"> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Female <%= @pet.species%>. </p>
       <% else %>
-        <p> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Male <%= @pet.species%>. </p>
+        <p class="fw-bold fs-4"> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Male <%= @pet.species%>. </p>
       <% end %>
       <%= @pet.description %>
     </div>
-      <p class="size"> Size: <%= @pet.size %> <p>
-    <div class="price">
-      <p> <%= @pet.price_per_day %> ¥ per day </p>
+    <div class="price d-flex">
+      <p class="size fw-bold"> Size: <%= @pet.size %> <p>
+      <p class="fw-bold"> ¥<%= @pet.price_per_day %> per day </p>
     </div>
 
   </div>
