@@ -1,6 +1,6 @@
 .btn-primary {
   display: inline-block;
-  background-color: $orange;
+  background-color: $pawsitive-purple;
   padding: 16px 36px;
   border-radius: 50px;
   color: white;
@@ -14,5 +14,15 @@
 }
 
 .btn-explore:hover {
-    background-color: $pawsitive-purple;
+  background-color: #4a37b8;
+  transition-duration: .5s;
+}
+
+.home-button {
+  background-color: $pawsitive-purple;
+}
+
+.home-button:hover {
+  background-color: #4a37b8;
+  transition-duration: .5s;
 }
