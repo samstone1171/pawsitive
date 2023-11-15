@@ -34,6 +34,12 @@
   }
 }
 
+.pet-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  object-fit: cover;
+}
 .home {
   width: 400px;
   background-color: $pawsitive-light-brown-white;

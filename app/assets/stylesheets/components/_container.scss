@@ -14,3 +14,24 @@
     width: 300px;
   }
 }
+
+.pets-index-container {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-right: 2px solid $pawsitive-light-brown-white;
+  border-left: 2px solid $pawsitive-light-brown-white;
+  background-image: url("../../images/index-background.png");
+  background-size: cover;
+}
+.pet-cards-container {
+  color: rgb(85, 85, 85);
+}
+.pet-cards-container:hover {
+  color: black;
+  transition: 0.6s ease;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}

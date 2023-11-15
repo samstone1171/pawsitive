@@ -3,12 +3,46 @@
   background-position: center;
   height: 180px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  justify-content: left;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  align-items: end;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-pet > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-pet-desc h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-pet-desc p {
+  font-size: 16px;
+  opacity: .7;
+}
+
+
+.card-pet-infos {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 5px 15px;
+  border-radius: 5px;
+}
+
+.card-pet-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
 }
