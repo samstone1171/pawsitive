@@ -4,7 +4,7 @@
 
     <%= link_to pet_path(pet) do %>
       <div class="pet-cards-container">
-        <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key, crop: :thumb %>');">
+        <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key %>');">
         </div>
         <div class="card-pet-infos d-flex">
           <div class="card-pet-desc">

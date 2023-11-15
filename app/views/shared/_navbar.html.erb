@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon text-white">
   <div class="container-fluid">
     <div class="logo">
-      <%= link_to root_path, class: "navbar-brand text-white" do %>
-        Pawsitive <%= image_tag "logo.png" %>
+      <%= link_to root_path, class: "navbar-brand text-white fs-3 d-flex" do %>
+        <%= image_tag "logo.png" %> <h4 class="mt-1">Pawsitive</h4>
       <% end %>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,8 +12,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active text-white">
-            <%= link_to "Home", root_path, class: "nav-link text-white" %>
+          <li class="nav-item active text-white fs-5">
+            <%= link_to "Home", root_path, class: "nav-link text-white fs-5" %>
           </li>
           <%# <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
@@ -23,15 +23,15 @@
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-square", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "My Listings", account_path, class: "dropdown-item" %>
+              <%= link_to "My Rentals", rentals_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item text-white fs-5" %>
             </div>
           </li>
         <% else %>
           <li class="nav-item d-flex">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link text-white fs-5" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link text-white fs-5" %>
           </li>
         <% end %>
       </ul>
