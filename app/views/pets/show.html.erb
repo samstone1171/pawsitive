@@ -1,2 +1,32 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<div class="container">
+  <h1 class="text-center m-4"> <%=@pet.name%> </h1>
+  <div class="row">
+  <div class="box-container">
+    <div class=" col col-md-6">
+    <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill, radius: 20 %>
+    </div>
+    <div class="col col-md-6 container-form">
+      <h3 class="text-center m-3"> Make a rental request </h3>
+      <%= render "shared/form", pet: @pet, rental: @rental %>
+    </div>
+  </div>
+</div>
+
+
+  <div class="details-container mt-5 mb-5">
+    <div class="details">
+      <% if @pet.gender == 'F'%>
+        <p class="fw-bold fs-4"> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Female <%= @pet.species%>. </p>
+      <% else %>
+        <p class="fw-bold fs-4"> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Male <%= @pet.species%>. </p>
+      <% end %>
+      <%= @pet.description %>
+    </div>
+    <div class="price d-flex">
+      <p class="size fw-bold"> Size: <%= @pet.size %> <p>
+      <p class="fw-bold"> ¥<%= @pet.price_per_day %> per day </p>
+    </div>
+
+  </div>
+
+</div>

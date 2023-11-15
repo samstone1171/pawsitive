@@ -14,8 +14,10 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-      <div class="form-actions btn btn-outline-primary w-100 rounded-pill">
-        <%= f.button :submit, "Log in" %>
+      <div class="d-flex justify-content-center">
+      <div class="submit_button">
+        <%= f.button :submit,"Submit", class: "btn-submit" %>
+      </div>
       </div>
     <div class="text-center mt-5">
     <%= render "devise/shared/links" %>

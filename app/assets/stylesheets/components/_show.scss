@@ -1,0 +1,32 @@
+.box-container {
+gap: 5px;
+display: flex;
+}
+
+.container-form {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+}
+
+.details-container {
+display: flex;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius: 5px;
+height: 300px;
+position: relative;
+padding: 10px;
+}
+
+.price{
+  position: absolute;
+  right: 20px;
+  gap: 10px
+}
+.size {
+
+}
+
+.rental-status {
+  font-style: italic;
+}

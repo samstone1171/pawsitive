@@ -61,7 +61,7 @@ henry = Pet.create!(
   name: "Henry",
   gender: "M",
   species: "Cat",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Medium",
   description: "Henry is very chatty and will knock your ugly decor off of the walls. He is fierce but it is constructive criticism. He does not scratch or bite.",
   price_per_day: 40000,
@@ -87,7 +87,7 @@ cheddar = Pet.create!(
   name: "Cheddar",
   gender: "M",
   species: "Mouse",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Small",
   description: "Cheddar can hunt down any bugs you have in your house and get rid of them. He might also chew through your electric wiring, but he is currently in anger management classes for that. Should not be a problem.",
   price_per_day: 20000,
@@ -100,7 +100,7 @@ rocky = Pet.create!(
   name: "Rocky",
   gender: "M",
   species: "Dog",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Small",
   description: "Toy poodle. No allergies. Loves people. He is a bit naughty on the outside, but has a good heart Price: 5000JPY per day",
   price_per_day: 5000,
@@ -111,7 +111,7 @@ rocky.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 mike = Pet.create!(
   lister: yusuke,
   name: "Mike",
-  gender: "F",
+  gender: "M",
   species: "Dog",
   life_stage: "Adult",
   size: "Medium",
@@ -139,7 +139,7 @@ taro = Pet.create!(
   name: "Taro",
   gender: "M",
   species: "Chameleon",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Small",
   description: "He loves eating xxx. I will share the details after booking.",
   price_per_day: 12000,
@@ -165,7 +165,7 @@ hammie = Pet.create!(
   name: "Hammie",
   gender: "F",
   species: "Hamster",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Small",
   description: "A cute Hammie. She loves funions and will attack you for them. WATCH YOUR BACK.  Available for pick-up at 9am and drop-off at 8pm.",
   price_per_day: 8500,
@@ -269,7 +269,7 @@ ruby = Pet.create!(
   name: "Ruby",
   gender: "F",
   species: "Beaver",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Medium",
   description: "Ruby is off the rails, but shes a sweetheart. She likes regular baths and naps.",
   price_per_day: 5000,
@@ -282,7 +282,7 @@ macaroni = Pet.create!(
   name: "Macaroni",
   gender: "M",
   species: "Polar bear",
-  life_stage: "Youth",
+  life_stage: "Young",
   size: "Medium",
   description: "He likes to cuddle as long as you feed him on time...",
   price_per_day: 7000,
@@ -307,7 +307,7 @@ Rental.create!(
   start_date: "2023-10-31",
   end_date: "2023-11-05",
   status: "accepted",
-  total_price: 20000,
+  total_price: 100000,
 )
 
 Rental.create!(
@@ -316,16 +316,16 @@ Rental.create!(
   start_date: "2023-11-03",
   end_date: "2023-11-09",
   status: "accepted",
-  total_price: 6000,
+  total_price: 12000,
 )
 
 Rental.create!(
   pet: taro,
   renter: sammie,
-  start_date: "2023-11-31",
+  start_date: "2023-11-30",
   end_date: "2023-12-05",
   status: "waiting",
-  total_price: 12000,
+  total_price: 60000,
 )
 
 Rental.create!(
@@ -334,7 +334,7 @@ Rental.create!(
   start_date: "2023-12-12",
   end_date: "2023-12-14",
   status: "waiting",
-  total_price: 5000,
+  total_price: 10000,
 )
 
 Rental.create!(
@@ -343,7 +343,7 @@ Rental.create!(
   start_date: "2023-12-21",
   end_date: "2023-12-28",
   status: "accepted",
-  total_price: 8500,
+  total_price: 59500,
 )
 
 Rental.create!(
@@ -352,7 +352,7 @@ Rental.create!(
   start_date: "2023-12-22",
   end_date: "2023-12-26",
   status: "declined",
-  total_price: 5000,
+  total_price: 20000,
 )
 
 Rental.create!(
@@ -361,7 +361,7 @@ Rental.create!(
   start_date: "2023-11-29",
   end_date: "2023-12-01",
   status: "accepted",
-  total_price: 7000,
+  total_price: 14000,
 )
 
 Rental.create!(
@@ -370,7 +370,7 @@ Rental.create!(
   start_date: "2023-11-27",
   end_date: "2023-12-14",
   status: "accepted",
-  total_price: 40000,
+  total_price: 680000,
 )
 
 Rental.create!(
@@ -379,7 +379,7 @@ Rental.create!(
   start_date: "2023-12-11",
   end_date: "2023-12-14",
   status: "accepted",
-  total_price: 7000,
+  total_price: 21000,
 )
 
 puts "Finished!"
