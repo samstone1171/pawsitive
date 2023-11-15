@@ -1,4 +1,7 @@
 class RentalsController < ApplicationController
+  def index
+    @rentals = current_user.rentals
+  end
 
   def create
     @rental = Rental.new(rental_params)
