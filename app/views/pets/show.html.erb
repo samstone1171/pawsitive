@@ -2,8 +2,8 @@
   <h1 class="text-center m-4"> <%=@pet.name%> </h1>
   <div class="row">
   <div class="box-container">
-    <div class=" col col-md-6 image-box">
-      <%= cl_image_tag @pet.photo.key, height: 400, width: 400, crop: :fill, radius: 40 %>
+    <div class=" col col-md-6 image-box shadow-sm">
+      <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill, radius: 20 %>
     </div>
     <div class="col col-md-6 container-form">
       <h3> FORM </h3>
@@ -12,9 +12,20 @@
 </div>
 
 
-  <div class="details-container mt-5">
-    <%=@pet.life_stage%>
-    <%=@pet.gender%>
+  <div class="details-container mt-5 mb-5">
+    <div class="details">
+      <% if @pet.gender == 'F'%>
+        <p> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Female <%= @pet.species%>. </p>
+      <% else %>
+        <p> <%= @pet.name %> is a(n) <%=@pet.life_stage%> Male <%= @pet.species%>. </p>
+      <% end %>
+      <%= @pet.description %>
+    </div>
+      <p class="size"> Size: <%= @pet.size %> <p>
+    <div class="price">
+      <p> <%= @pet.price_per_day %> ¥ per day </p>
+    </div>
+
   </div>
 
 </div>

@@ -4,7 +4,8 @@ display: flex;
 }
 
 .container-form {
-  border: solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   width: 50%;
 }
 
@@ -13,7 +14,19 @@ display: flex;
 }
 
 .details-container {
-border: solid;
+display: flex;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius: 5px;
 height: 100px;
+position: relative;
+padding: 10px;
+}
 
+.price{
+  position: absolute;
+  right: 20px;
+}
+.size {
+  position: absolute;
+  left: 400px;
 }
