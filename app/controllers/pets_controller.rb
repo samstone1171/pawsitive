@@ -6,6 +6,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @rental = Rental.new
   end
 
   def new
@@ -13,5 +14,4 @@ class PetsController < ApplicationController
 
   def create
   end
-
 end
