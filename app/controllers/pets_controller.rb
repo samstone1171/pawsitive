@@ -10,6 +10,6 @@ class PetsController < ApplicationController
   end
 
   def show
-    raise
+
   end
 end
