@@ -1,2 +1,20 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<div class="container">
+  <h1 class="text-center m-4"> <%=@pet.name%> </h1>
+  <div class="row">
+  <div class="box-container">
+    <div class=" col col-md-6 image-box">
+      <%= cl_image_tag @pet.photo.key, height: 400, width: 400, crop: :fill, radius: 40 %>
+    </div>
+    <div class="col col-md-6 container-form">
+      <h3> FORM </h3>
+    </div>
+  </div>
+</div>
+
+
+  <div class="details-container mt-5">
+    <%=@pet.life_stage%>
+    <%=@pet.gender%>
+  </div>
+
+</div>
