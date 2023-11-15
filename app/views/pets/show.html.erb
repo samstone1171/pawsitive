@@ -6,6 +6,7 @@
     <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill, radius: 20 %>
     </div>
     <div class="col col-md-6 container-form">
+      <h3 class="text-center m-3"> Make a rental request </h3>
       <%= render "shared/form", pet: @pet, rental: @rental %>
     </div>
   </div>
