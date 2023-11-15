@@ -5,11 +5,20 @@
 
     <%= link_to account_path(rental) do %>
       <div class="pet-cards-container">
-        <div class="card-category" style="background-image: url('<%= cl_image_path rental.pet.photo.key, crop: :thumb %>');">
+        <div class="card-pet-category" style="background-image: url('<%= cl_image_path rental.pet.photo.key, crop: :thumb %>');">
         </div>
         <div class="card-pet-infos d-flex">
           <div class="card-pet-desc">
-            <h2><%= rental.pet.name %> <p class="rental-status"><%= (rental.status) %></p></h2>
+            <h2 class="mb-0"><%= rental.pet.name %></h2>
+            <div class="rental-status">
+              <% if rental.status == 'waiting'%>
+                <p class="rental-status mt-1"><%= (rental.status) %>... </p>
+              <% elsif rental.status == 'accepted'%>
+                <p class="rental-status mt-1 text-success"><%= (rental.status) %>! </p>
+              <% else  %>
+                <p class="rental-status mt-1 text-danger"><%= (rental.status) %>. </p>
+              <% end %>
+            </div>
             <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
           </div>
         <p class="card-pet-pricing">¥<%= rental.pet.price_per_day %> total</p>

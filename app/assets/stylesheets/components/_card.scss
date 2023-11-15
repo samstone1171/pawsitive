@@ -1,4 +1,21 @@
-.card-category {
+.card img {
+  width: 150px;
+}
+
+.card p {
+  opacity: .5;
+}
+
+.card {
+  width: 375px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.card-pet-category {
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -45,4 +62,11 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.home {
+  width: 400px;
+  background-color: $pawsitive-light-brown-white;
+  margin-top: 30px;
+  height: 300px;
 }
