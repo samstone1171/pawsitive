@@ -1,0 +1,21 @@
+
+<h2 class="mt-4 mb-3 center">Your Rental History</h2>
+
+<div class="bg-pawsitive-orange pet-cards mb-5"><% @rentals.each do |rental| %>
+
+    <%= link_to account_path(rental) do %>
+      <div class="pet-cards-container">
+        <div class="card-category" style="background-image: url('<%= cl_image_path rental.pet.photo.key, crop: :thumb %>');">
+        </div>
+        <div class="card-pet-infos d-flex">
+          <div class="card-pet-desc">
+            <h2><%= rental.pet.name %> <p class="rental-status"><%= (rental.status) %></p></h2>
+            <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
+          </div>
+        <p class="card-pet-pricing">¥<%= rental.pet.price_per_day %> total</p>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pet-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>

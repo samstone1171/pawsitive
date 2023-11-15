@@ -111,7 +111,7 @@ rocky.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 mike = Pet.create!(
   lister: yusuke,
   name: "Mike",
-  gender: "F",
+  gender: "M",
   species: "Dog",
   life_stage: "Adult",
   size: "Medium",
