@@ -307,7 +307,7 @@ Rental.create!(
   start_date: "2023-10-31",
   end_date: "2023-11-05",
   status: "accepted",
-  total_price: 20000,
+  total_price: 100000,
 )
 
 Rental.create!(
@@ -316,16 +316,16 @@ Rental.create!(
   start_date: "2023-11-03",
   end_date: "2023-11-09",
   status: "accepted",
-  total_price: 6000,
+  total_price: 12000,
 )
 
 Rental.create!(
   pet: taro,
   renter: sammie,
-  start_date: "2023-11-31",
+  start_date: "2023-11-30",
   end_date: "2023-12-05",
   status: "waiting",
-  total_price: 12000,
+  total_price: 60000,
 )
 
 Rental.create!(
@@ -334,7 +334,7 @@ Rental.create!(
   start_date: "2023-12-12",
   end_date: "2023-12-14",
   status: "waiting",
-  total_price: 5000,
+  total_price: 10000,
 )
 
 Rental.create!(
@@ -343,7 +343,7 @@ Rental.create!(
   start_date: "2023-12-21",
   end_date: "2023-12-28",
   status: "accepted",
-  total_price: 8500,
+  total_price: 59500,
 )
 
 Rental.create!(
@@ -352,7 +352,7 @@ Rental.create!(
   start_date: "2023-12-22",
   end_date: "2023-12-26",
   status: "declined",
-  total_price: 5000,
+  total_price: 20000,
 )
 
 Rental.create!(
@@ -361,7 +361,7 @@ Rental.create!(
   start_date: "2023-11-29",
   end_date: "2023-12-01",
   status: "accepted",
-  total_price: 7000,
+  total_price: 14000,
 )
 
 Rental.create!(
@@ -370,7 +370,7 @@ Rental.create!(
   start_date: "2023-11-27",
   end_date: "2023-12-14",
   status: "accepted",
-  total_price: 40000,
+  total_price: 680000,
 )
 
 Rental.create!(
@@ -379,7 +379,7 @@ Rental.create!(
   start_date: "2023-12-11",
   end_date: "2023-12-14",
   status: "accepted",
-  total_price: 7000,
+  total_price: 21000,
 )
 
 puts "Finished!"
