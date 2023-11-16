@@ -1,0 +1,23 @@
+xs<div class="card-product">
+<div class="box-product">
+  <div class="me-3">
+    <%= cl_image_tag rental.pet.photo.key, crop: :fill, radius: 20 %>
+  </div>
+    <div class="card-product-infos">
+        <h2><%=rental.pet.name%></h2>
+        <p><%= rental.start_date %> to <%= rental.end_date %></p>
+    </div>
+  </div>
+    <div class="me-3">
+      <%= link_to "Accept",
+          accept_rental_path(rental),
+          data: {turbo_method: :patch, turbo_confirm: "Are you sure?"},
+          class: "btn btn-primary btn-explore"
+      %>
+      <%= link_to "Decline",
+          decline_rental_path(rental),
+          data: {turbo_method: :patch, turbo_confirm: "Are you sure?"},
+          class: "btn btn-primary btn-explore"
+      %>
+    </div>
+</div>

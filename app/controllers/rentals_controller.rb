@@ -29,6 +29,18 @@ class RentalsController < ApplicationController
     end
   end
 
+  def accept
+    @rental = Rental.find(params[:id])
+    @rental.status = "accepted"
+    @rental.save
+  end
+
+  def decline
+    @rental = Rental.find(params[:id])
+    @rental.status = "declined"
+    @rental.save
+  end
+
   private
 
   def rental_params
