@@ -1,5 +1,22 @@
 
+
+
+
 <h2 class="mt-4 mb-3 center">Your Rental History</h2>
+
+<div class="row justify-content-center">
+  <div class="col-sm-6 my-3">
+    <%= form_with url: rentals_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search rental by status"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
 
 <div class="bg-pawsitive-orange pet-cards mb-5"><% @rentals.each do |rental| %>
 
@@ -9,7 +26,16 @@
         </div>
         <div class="card-pet-infos d-flex">
           <div class="card-pet-desc">
-            <h2><%= rental.pet.name %> <p class="rental-status"><%= (rental.status) %></p></h2>
+            <h2><%= rental.pet.name %></h2>
+            <div class="rental-status">
+              <% if rental.status == 'waiting'%>
+                <p class="rental-status mt-1 rental-status-waiting"><%= (rental.status) %>... </p>
+              <% elsif rental.status == 'accepted'%>
+                <p class="rental-status mt-1 rental-status-approved"><%= (rental.status) %>! </p>
+              <% else  %>
+                <p class="rental-status mt-1 rental-status-declined"><%= (rental.status) %> </p>
+              <% end %>
+            </div>
             <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
           </div>
         <p class="card-pet-pricing">¥<%= rental.pet.price_per_day %> total</p>
