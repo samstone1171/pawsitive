@@ -9,10 +9,25 @@ User.destroy_all
 
 # users (x4)
 puts "Creating users..."
-bob = User.create!(email: "givemepizza@gmail.com", password: "OMGWTF", first_name: "Bob", last_name: "Bobbo")
+babyyoda = User.create!(email: "givemepizza@gmail.com", password: "OMGWTF", first_name: "Baby Yoda", last_name: "Mando")
+file = File.open(Rails.root.join("app/assets/images/users/babyyoda.jpeg"))
+babyyoda.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+
 doug = User.create!(email: "ilovetherams@gmail.com", password: "ih8passwords", first_name: "Doug", last_name: "Berkley")
+file = File.open(Rails.root.join("app/assets/images/users/doug.jpeg"))
+doug.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+
 sammie = User.create!(email: "samhatesham@gmail.com", password: "meow35", first_name: "Sammie", last_name: "Shakes")
+file = File.open(Rails.root.join("app/assets/images/users/sammie.jpeg"))
+sammie.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+
 yusuke = User.create!(email: "rockyShirokane@gmail.com", password: "paw0122", first_name: "Yusuke", last_name: "Mori")
+file = File.open(Rails.root.join("app/assets/images/users/yusuke.jpeg"))
+yusuke.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+
+yann = User.create!(email: "curlybrackets@gmail.com", password: "javascript", first_name: "Yann", last_name: "Klein")
+file = File.open(Rails.root.join("app/assets/images/users/yann.jpeg"))
+yann.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 puts "Creating pets..."
 # pets (x21)
@@ -161,7 +176,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/Miikko.jpeg"))
 miikko.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 hammie = Pet.create!(
-  lister: bob,
+  lister: babyyoda,
   name: "Hammie",
   gender: "F",
   species: "Hamster",
@@ -174,7 +189,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/Hammie.jpeg"))
 hammie.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 meowie = Pet.create!(
-  lister: bob,
+  lister: babyyoda,
   name: "Meowie",
   gender: "M",
   species: "Orange Cat",
@@ -187,7 +202,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/Meowie.jpeg"))
 meowie.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 bigmama = Pet.create!(
-  lister: bob,
+  lister: babyyoda,
   name: "Big Mama",
   gender: "F",
   species: "Hippo",
@@ -200,7 +215,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/BigMama.jpeg"))
 bigmama.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 derpie = Pet.create!(
-  lister: bob,
+  lister: babyyoda,
   name: "Derpie",
   gender: "F",
   species: "Dog",
@@ -213,7 +228,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/Derpie.jpeg"))
 derpie.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 greg = Pet.create!(
-  lister: bob,
+  lister: babyyoda,
   name: "Greg",
   gender: "F",
   species: "Crocodile",
@@ -265,7 +280,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/Gary.jpeg"))
 gary.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 ruby = Pet.create!(
-  lister: doug,
+  lister: yann,
   name: "Ruby",
   gender: "F",
   species: "Beaver",
@@ -278,7 +293,7 @@ file = File.open(Rails.root.join("app/assets/images/pets/Ruby.jpeg"))
 ruby.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
 macaroni = Pet.create!(
-  lister: doug,
+  lister: yann,
   name: "Macaroni",
   gender: "M",
   species: "Polar bear",
@@ -303,7 +318,7 @@ Rental.create!(
 
 Rental.create!(
   pet: cheddar,
-  renter: doug,
+  renter: yann,
   start_date: "2023-10-31",
   end_date: "2023-11-05",
   status: "accepted",
@@ -312,7 +327,7 @@ Rental.create!(
 
 Rental.create!(
   pet: mike,
-  renter: bob,
+  renter: babyyoda,
   start_date: "2023-11-03",
   end_date: "2023-11-09",
   status: "accepted",
@@ -366,7 +381,7 @@ Rental.create!(
 
 Rental.create!(
   pet: miikko,
-  renter: bob,
+  renter: babyyoda,
   start_date: "2023-11-27",
   end_date: "2023-12-14",
   status: "accepted",
@@ -375,7 +390,7 @@ Rental.create!(
 
 Rental.create!(
   pet: metalgearsolid,
-  renter: doug,
+  renter: yann,
   start_date: "2023-12-11",
   end_date: "2023-12-14",
   status: "accepted",

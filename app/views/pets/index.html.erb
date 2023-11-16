@@ -12,7 +12,7 @@
             <p><%= pet.life_stage %> <%= pet.species %></p>
           </div>
         <p class="card-pet-pricing">¥<%= pet.price_per_day %> per day</p>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pet-user avatar-bordered" />
+        <%= cl_image_tag pet.lister.photo.key, class: "card-pet-user avatar-bordered"%>
         </div>
       </div>
     <% end %>
