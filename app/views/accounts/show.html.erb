@@ -11,7 +11,9 @@
  <p class="text-center m-4 card w-100"> [notification ]You have the request </p>
 
 <% @rentals.each do |rental| %>
-<%= render "shared/requestcheck", rental: rental%>
+    <% if rental.status == "waiting" %>
+    <%= render "shared/requestcheck", rental: rental%>
+    <% end%>
 <% end  %>
 
  <div class="row">
