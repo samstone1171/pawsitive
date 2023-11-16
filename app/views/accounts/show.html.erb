@@ -1,30 +1,64 @@
-<%= @account.first_name %>
-<%= @account.last_name %>
-<%= @account.email %>
+<!-- Greetings--->
+<!-- User account profile
+<%= cl_image_tag @account.photo.key, class: "bg-pawsitive-orange pet-cards" %>
+--->
 
-<%= cl_image_tag @account.photo.key, class: "ADD CLASS HERE"%>
+<div class="container">
+ <h1 class="text-center m-4"> Hello <%=@account.first_name%> </h1>
+
+  <!-- Notification --->
+<div class="container">
+ <p class="text-center m-4 card w-100"> [notification ]You have the request </p>
 
 
-<% @pets.each do |pet| %>
-<%= pet.name  %>
-<% end %>
 
-<div class="container pets-index-container"> <strong>21 pets near you</strong>
-<div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
-    <%= link_to pet_path(pet) do %>
-      <div class="pet-cards-container">
-        <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key %>');">
-        </div>
-        <div class="card-pet-infos d-flex">
-          <div class="card-pet-desc">
-            <h2><%= pet.name %></h2>
-            <p><%= pet.life_stage %> <%= pet.species %></p>
-          </div>
-        <p class="card-pet-pricing">¥<%= pet.price_per_day %> per day</p>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pet-user avatar-bordered" />
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+ <div class="row">
+  <!-- Account details --->
+  <div class="col-4">
+    <div class=".account-profile-container card w-100">
+      <h2> your account details </h2>
+        <%= cl_image_tag @account.photo.key, class: "account-avatar-square", alt: "avatar-square" %>
+        <p><%= @account.first_name %></p>
+        <p><%= @account.last_name %></p>
+        <p><%= @account.email %></p>
+    </div>
   </div>
-</div>
+  <!-- Current listing pets --->
+  <div class="col-8">
+
+    <div class ="details-container-profile">
+        <div class="container account-pets-container">
+        <h2>Your lovely pets</h2>
+        <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
+
+  <!-- Current having pets--->
+            <%= link_to pet_path(pet) do %>
+              <div class="pet-cards-container">
+                <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key %>');">
+                </div>
+                <div class="card-pet-infos d-flex">
+                  <div class="card-pet-desc">
+                    <h2><%= pet.name %></h2>
+                    <p><%= pet.life_stage %> <%= pet.species %></p>
+                  </div>
+                <p class="card-pet-pricing">¥<%= pet.price_per_day %> per day</p>
+                </div>
+              </div>
+            <% end %>
+            <% end %>
+
+  <!-- New pets
+                <div class="card-pet-infos d-flex">
+                <div class="card-pet-desc">
+                </div>
+                </div>
+  --->
+            <div class="pet-cards-container">
+              <%= link_to image_tag("plus_icon", class: 'd-block w-100'), new_pet_path  %>
+             </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
