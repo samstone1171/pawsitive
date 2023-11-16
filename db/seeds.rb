@@ -25,7 +25,6 @@ yusuke = User.create!(email: "rockyShirokane@gmail.com", password: "paw0122", fi
 file = File.open(Rails.root.join("app/assets/images/users/yusuke.jpeg"))
 yusuke.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
 
-puts "Creating users..."
 yann = User.create!(email: "curlybrackets@gmail.com", password: "javascript", first_name: "Yann", last_name: "Klein")
 file = File.open(Rails.root.join("app/assets/images/users/yann.jpeg"))
 yann.photo.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")

@@ -13,7 +13,7 @@
             <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
           </div>
         <p class="card-pet-pricing">¥<%= rental.pet.price_per_day %> total</p>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-pet-user avatar-bordered" />
+        <%= cl_image_tag rental.renter.photo.key, class: "card-pet-user avatar-bordered"%>
         </div>
       </div>
     <% end %>
