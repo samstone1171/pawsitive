@@ -9,6 +9,7 @@ xs<div class="card-product">
     </div>
   </div>
     <div class="me-3">
+    <% if rental.status == "waiting" %>
       <%= link_to "Accept",
           accept_rental_path(rental),
           data: {turbo_method: :patch, turbo_confirm: "Are you sure?"},
@@ -19,5 +20,6 @@ xs<div class="card-product">
           data: {turbo_method: :patch, turbo_confirm: "Are you sure?"},
           class: "btn btn-primary btn-explore"
       %>
+    <% end %>
     </div>
 </div>
