@@ -10,7 +10,9 @@
 <div class="container">
  <p class="text-center m-4 card w-100"> [notification ]You have the request </p>
 
-
+<% @rentals.each do |rental| %>
+<%= render "shared/requestcheck", rental: rental%>
+<% end  %>
 
  <div class="row">
   <!-- Account details --->
@@ -26,7 +28,7 @@
   <!-- Current listing pets --->
   <div class="col-8">
 
-    <div class ="details-container-profile">
+    <div class  ="details-container-profile">
         <div class="container account-pets-container">
         <h2>Your lovely pets</h2>
         <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
