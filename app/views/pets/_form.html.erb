@@ -2,8 +2,8 @@
   <%= f.input :name %>
   <%= f.input :gender, collection: [ ['female', 'F'], ['male', 'M'] ], include_blank: false %>
   <%= f.input :species %>
-  <%= f.input :life_stage %>
-  <%= f.input :size %>
+  <%= f.input :life_stage, collection: ['Adult', 'Young', 'Elder', 'Baby'], include_blank: false %>
+  <%= f.input :size, collection: ['Extra Small', 'Small', 'Medium','Large', 'Extra Large'], include_blank: false %>
   <%= f.input :description %>
   <%= f.input :price_per_day %>
   <%= f.input :photo, as: :file %>
