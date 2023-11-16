@@ -1,0 +1,13 @@
+<%= simple_form_for [pet] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :gender, collection: [ ['female', 'F'], ['male', 'M'] ], include_blank: false %>
+  <%= f.input :species %>
+  <%= f.input :life_stage %>
+  <%= f.input :size %>
+  <%= f.input :description %>
+  <%= f.input :price_per_day %>
+  <%= f.input :photo, as: :file %>
+
+  <%= f.submit "Add a Pet", class: "btn-primary btn-explore" %>
+
+<% end %>
