@@ -393,7 +393,17 @@ Rental.create!(
   renter: yann,
   start_date: "2023-12-11",
   end_date: "2023-12-14",
-  status: "accepted",
+  status: "declined",
+  total_price: 21000,
+)
+
+
+Rental.create!(
+  pet: cassandra,
+  renter: yann,
+  start_date: "2023-12-21",
+  end_date: "2023-12-24",
+  status: "waiting",
   total_price: 21000,
 )
 
