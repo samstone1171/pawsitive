@@ -2,3 +2,18 @@
 .banner-text {
   color: $pawsitive-light-brown-gray;
 }
+
+.rental-status-approved {
+  color: green;
+  font-weight: bold;
+}
+
+.rental-status-declined {
+  color: red;
+  font-weight: bold;
+}
+
+.rental-status-waiting {
+  color: orange;
+  font-weight: bold;
+}
