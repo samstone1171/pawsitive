@@ -1,7 +1,14 @@
 class RentalsController < ApplicationController
   def index
     @rentals = current_user.rentals
+    if params[:query].present?
+      sql_subquery = "rentals.status ILIKE :query OR pets.name ILIKE :query"
+      @rentals = @rentals.
+        joins(:pet).
+        where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
+
 
   def create
     @rental = Rental.new(rental_params)
