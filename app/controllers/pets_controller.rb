@@ -3,6 +3,10 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR species ILIKE :query"
+      @pets = @pets.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show
