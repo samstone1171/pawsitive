@@ -1,5 +1,20 @@
-<div class="container pets-index-container"> <strong>21 pets near you</strong>
+
+<div class="container pets-index-container"> <h2>21 pets near you</h2>
 <p></p>
+
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for a species"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
   <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
 
     <%= link_to pet_path(pet) do %>

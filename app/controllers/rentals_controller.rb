@@ -7,6 +7,9 @@ class RentalsController < ApplicationController
         joins(:pet).
         where(sql_subquery, query: "%#{params[:query]}%")
     end
+    if params[:status].present?
+      @rentals = @rentals.where(status: params[:status])
+    end
   end
 
 
