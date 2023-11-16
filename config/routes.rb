@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resource :account, only: [:show]
-  resources :pets, only: [:new, :show, :create, :index] do
+  resources :pets do
     resources :rentals, only: [:create]
   end
   resources :rentals, only: [:index] do
