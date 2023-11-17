@@ -11,13 +11,13 @@
   <div class="row justify-content-center">
     <div class="col-sm-6 my-3">
       <%= form_with url: rentals_path, method: :get do %>
-        <div class="d-flex">
+        <div class="d-flex m-0">
           <%= text_field_tag :query,
                 params[:query],
-                class: "form-control",
+                class: "form-control rental-form",
                 placeholder: "Type a pet name"
             %>
-          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary", id: "search-btn" %>
         </div>
       <% end %>
     </div>

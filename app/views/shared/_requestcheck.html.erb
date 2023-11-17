@@ -8,17 +8,17 @@
         <p><%= rental.start_date %> to <%= rental.end_date %></p>
     </div>
   </div>
-    <div class="me-3">
+    <div class="me-3 rental-query-btns">
     <% if rental.status == "waiting" %>
       <%= link_to "Accept",
           accept_rental_path(rental),
           data: {turbo_method: :patch, turbo_confirm: "Are you sure?"},
-          class: "btn btn-primary btn-explore"
+          class: "bbtn btn-primary bg-success border-success", id:"search-btn"
       %>
       <%= link_to "Decline",
           decline_rental_path(rental),
           data: {turbo_method: :patch, turbo_confirm: "Are you sure?"},
-          class: "btn btn-primary btn-explore"
+          class: "btn btn-primary bg-danger border-danger mt-1", id:"search-btn"
       %>
     <% end %>
     </div>
