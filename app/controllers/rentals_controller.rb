@@ -36,12 +36,14 @@ class RentalsController < ApplicationController
     @rental = Rental.find(params[:id])
     @rental.status = "accepted"
     @rental.save
+    redirect_to account_path
   end
 
   def decline
     @rental = Rental.find(params[:id])
     @rental.status = "declined"
     @rental.save
+    redirect_to account_path
   end
 
   private
