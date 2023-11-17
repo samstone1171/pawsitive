@@ -49,7 +49,7 @@
               <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
             </div>
           <p class="card-pet-pricing"><%= number_to_currency(rental.total_price, unit: '¥', precision: 0, delimiter: ',') %> total</p>
-          <%= cl_image_tag rental.renter.photo.key, class: "card-pet-user avatar-bordered"%>
+          <%= cl_image_tag rental.pet.lister.photo.key, class: "card-pet-user avatar-bordered"%>
           </div>
         </div>
       <% end %>
