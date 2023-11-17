@@ -1,16 +1,13 @@
-
-<div class="container pets-index-container"> <h2>21 pets near you</h2>
-<p></p>
-
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
-    <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
+<div class="container pets-index-container"> <h2>Pets near you:</h2>
+<div class="row">
+  <div class="col-6 my-3" style="width: 800px">
+    <%= form_with url: pets_path, method: :get, class: "d-flex justify-content-start m-0" do %>
       <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
-            placeholder: "Search for a species"
+            class: "form-control w-100",
+            placeholder: "Search for a pet species"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary", id: "search-btn" %>
     <% end %>
   </div>
 </div>
@@ -26,7 +23,7 @@
             <h2><%= pet.name %></h2>
             <p><%= pet.life_stage %> <%= pet.species %></p>
           </div>
-        <p class="card-pet-pricing">¥<%= pet.price_per_day %> per day</p>
+        <p class="card-pet-pricing"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',') %> per day</p>
         <%= cl_image_tag pet.lister.photo.key, class: "card-pet-user avatar-bordered"%>
         </div>
       </div>

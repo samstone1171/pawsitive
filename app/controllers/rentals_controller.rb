@@ -26,7 +26,7 @@ class RentalsController < ApplicationController
 
     if @rental.save
       flash[:notice] = "Request has been made!"
-      redirect_to pet_path(@pet)
+      redirect_to rentals_path
     else
       render "pets/show", status: :unprocessable_entity
     end
@@ -36,12 +36,14 @@ class RentalsController < ApplicationController
     @rental = Rental.find(params[:id])
     @rental.status = "accepted"
     @rental.save
+    redirect_to account_path
   end
 
   def decline
     @rental = Rental.find(params[:id])
     @rental.status = "declined"
     @rental.save
+    redirect_to account_path
   end
 
   private

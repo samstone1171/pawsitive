@@ -38,7 +38,7 @@
     </div>
     <div class="price d-flex">
       <p class="size fw-bold"> Size: <%= @pet.size %> <p>
-      <p class="fw-bold"> ¥<%= @pet.price_per_day %> per day </p>
+      <p class="fw-bold"> <%= number_to_currency(@pet.price_per_day, unit: '¥', precision: 0, delimiter: ',') %> per day </p>
     </div>
 
   </div>
