@@ -6,3 +6,10 @@ import "bootstrap"
 document.addEventListener('DOMContentLoaded', function () {
   var myCarousel = new bootstrap.Carousel(document.getElementById('myCarousel'));
 });
+const hearts = document.querySelectorAll(".heart-icon");
+  hearts.forEach((heart) => {
+    heart.addEventListener("click", (event) => {
+      console.log("click")
+      heart.classList.toggle("text-info")
+  })
+});
