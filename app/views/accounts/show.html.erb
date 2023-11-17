@@ -8,18 +8,23 @@
 
   <!-- Notification --->
 <div class="container">
- <p class="text-center m-4 card w-100"> [notification ]You have the request </p>
-
-<% @rentals.each do |rental| %>
-    <% if rental.status == "waiting" %>
-    <%= render "shared/requestcheck", rental: rental%>
-    <% end%>
-<% end  %>
-
+<div class="notification-container mb-5 card w-100">
+    <% if @rentals.find_by(status: 'waiting')%>
+      <p class="text-center m-4"> [notification ]You have paw requests <i class="fa-solid fa-bell"></i> </p>
+    <% else %>
+        <p class="text-center m-4"> [notification ]You have no paw requests currently... <i class="fa-solid fa-bell"></i> </p>
+    <% end %>
+  <% @rentals.each do |rental| %>
+      <% if rental.status == "waiting" %>
+        <%= render "shared/requestcheck", rental: rental%>
+      <% else %>
+      <% end%>
+  <% end  %>
+</div>
  <div class="row">
   <!-- Account details --->
   <div class="col-4">
-    <div class=".account-profile-container card w-100">
+    <div class=".account-profile-container card w-100 h-100 mb-3 ">
       <h2> your account details </h2>
         <%= cl_image_tag @account.photo.key, class: "account-avatar-square", alt: "avatar-square" %>
         <p><%= @account.first_name %></p>
@@ -30,7 +35,7 @@
   <!-- Current listing pets --->
   <div class="col-8">
 
-    <div class  ="details-container-profile">
+    <div class  ="details-container-profile mb-3">
         <div class="container account-pets-container">
         <h2>Your lovely pets</h2>
         <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
