@@ -91,3 +91,27 @@
 a {
   color: inherit;
 }
+
+.account-card {
+  width: 200px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: left;
+  padding-top: 50px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.notification-card {
+  width: 200px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: left;
+  padding-top: 50px;
+  padding-left:100px;
+  border: 1px solid rgb(230,230,230);
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

@@ -3,12 +3,12 @@
 <%= cl_image_tag @account.photo.key, class: "bg-pawsitive-orange pet-cards" %>
 --->
 
-<div class="container">
  <h1 class="text-center m-4"> Hello <%=@account.first_name%> </h1>
 
   <!-- Notification --->
 <div class="container">
-<div class="notification-container mb-5 card w-100">
+<div class="notification-container mb-5 notification-card w-100 bg-white">
+<div >
     <% if @rentals.find_by(status: 'waiting')%>
       <p class="text-center m-4"> [notification ]You have paw requests <i class="fa-solid fa-bell"></i> </p>
     <% else %>
@@ -20,24 +20,32 @@
       <% else %>
       <% end%>
   <% end  %>
+  </div>
 </div>
  <div class="row">
   <!-- Account details --->
   <div class="col-4">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center account-profile-container card w-100 bg-white ">
+      <h2> Your account</h2>
 
-    <div class=".account-profile-container card w-100 ">
-      <h2> Your account details: </h2>
+        <%= cl_image_tag @account.photo.key, class: "account-avatar-circle", crop: :fill, alt: "avatar-circle" %>
 
-        <%= cl_image_tag @account.photo.key, class: "account-avatar-square", alt: "avatar-square" %>
-        <p><%= @account.first_name %></p>
-        <p><%= @account.last_name %></p>
+        <p ><%= @account.first_name %> <%= @account.last_name %></p>
         <p><%= @account.email %></p>
+
+  <!-- other elements be implemented
+        <p>@account.address</p>
+        <p>@account.introduction</p>
+  --->
+
     </div>
+  </div>
   </div>
   <!-- Current listing pets --->
   <div class="col-8">
 
-    <div class  ="details-container-profile mb-3">
+    <div class  ="details-container-profile mb-3 bg-white">
         <div class="container account-pets-container">
         <h2>Your lovely pets</h2>
         <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
@@ -47,12 +55,12 @@
               <div class="pet-cards-container">
                 <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key %>');">
                 </div>
-                <div class="card-pet-infos d-flex">
+                <div class="card-pet-infos">
                   <div class="card-pet-desc">
                     <h2><%= pet.name %></h2>
-                    <p><%= pet.life_stage %> <%= pet.species %></p>
+                    <p><%= pet.species %> <%= pet.life_stage %></p>
                   </div>
-                <p class="card-pet-pricing"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',')%> per day</p>
+                <p class="card-pet-pricing fw-bold"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',')%> a day</p>
                 </div>
               </div>
             <% end %>

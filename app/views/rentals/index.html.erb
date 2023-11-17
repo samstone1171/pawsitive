@@ -1,5 +1,12 @@
 <div class="container pets-index-container">
   <h2 class="mt-4 mb-3 center">Your Rental History</h2>
+  <p class="center p-thick">Filter by rental request status:</p>
+      <div class="btn-radio">
+        <label class="orange-text">Waiting</label><%= radio_button_tag 'status', 'waiting' %>
+        <label class="green-text">&#160;&#160;&#160;Approved  </label><%= radio_button_tag 'status', 'accepted'%>
+        <label class="red-text">&#160;&#160;&#160;Declined  </label><%= radio_button_tag 'status', 'declined'%>
+      </div>
+
 
   <div class="row justify-content-center">
     <div class="col-sm-6 my-3">
@@ -12,9 +19,6 @@
             %>
           <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
         </div>
-        <label>Waiting</label><%= radio_button_tag 'status', 'waiting' %>
-        <label>Approved</label><%= radio_button_tag 'status', 'accepted'%>
-        <label>Declined</label><%= radio_button_tag 'status', 'declined'%>
       <% end %>
     </div>
   </div>
