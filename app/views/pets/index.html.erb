@@ -14,9 +14,10 @@
 
   <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
 
-    <%= link_to pet_path(pet) do %>
-      <div class="pet-cards-container">
-        <div class="card-category" style="background-image: url('<%= cl_image_path pet.photo.key %>');">
+    <div class="pet-cards-container card-container">
+      <i class="fa-solid fa-heart heart-icon"></i>
+      <%= link_to pet_path(pet) do %>
+        <div class="card-category card-background" style="background-image: url('<%= cl_image_path pet.photo.key %>');">
         </div>
         <div class="card-pet-infos d-flex">
           <div class="card-pet-desc">
@@ -26,8 +27,8 @@
         <p class="card-pet-pricing"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',') %> per day</p>
         <%= cl_image_tag pet.lister.photo.key, class: "card-pet-user avatar-bordered"%>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   <% end %>
   </div>
 </div>

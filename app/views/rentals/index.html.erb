@@ -15,12 +15,13 @@
         <%# <label class="red-text">&#160;&#160;&#160;Declined</label><%= radio_button_tag 'status', 'declined' %>
       </div>
         <div class="d-flex">
+
           <%= text_field_tag :query,
                 params[:query],
-                class: "form-control",
+                class: "form-control rental-form",
                 placeholder: "Type a pet name"
             %>
-          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary", id: "search-btn" %>
         </div>
       <% end %>
     </div>

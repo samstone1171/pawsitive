@@ -63,3 +63,9 @@
   background-color: #4bab80;
   color: white;
 }
+
+.rental-query-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
