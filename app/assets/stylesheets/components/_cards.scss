@@ -13,6 +13,16 @@
   }
 }
 
+.red-text {
+  color: red;
+}
+.orange-text {
+  color: orange;
+}
+.green-text {
+  color: green;
+}
+
 .bigicon {
   font-size: 80px;
   margin-bottom: 10px;
@@ -47,6 +57,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.p-thick {
+  font-weight: bold;
 }
 
 // .home-cards {
