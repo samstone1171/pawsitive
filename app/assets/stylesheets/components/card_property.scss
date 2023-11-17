@@ -1,12 +1,13 @@
 .card-product {
   overflow: hidden;
   height: 100px;
-  width: 100%;
+  width: 90%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .card-product img {
