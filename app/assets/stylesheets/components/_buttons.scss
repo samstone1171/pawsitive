@@ -44,7 +44,24 @@
 
 .btn-radio {
   text-align: center;
+}
 
+.btn-filter-red {
+  border-radius: 12px;
+  background-color: rgb(221, 90, 90);
+  color: white;
+}
+
+.btn-filter-orange {
+  border-radius: 12px;
+  background-color: rgb(218, 171, 84);
+  color: white;
+}
+
+.btn-filter-green {
+  border-radius: 12px;
+  background-color: #4bab80;
+  color: white;
 }
 
 .rental-query-btns {
