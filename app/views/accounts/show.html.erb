@@ -58,9 +58,10 @@
                 <div class="card-pet-infos">
                   <div class="card-pet-desc">
                     <h2><%= pet.name %></h2>
-                    <p><%= pet.species %> <%= pet.life_stage %></p>
+                    <p><%= pet.species %> </p>
+                    <p><%= pet.life_stage %></p>
+                    <p class="card-pet-pricing fw-bold"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',')%> per day</p>
                   </div>
-                <p class="card-pet-pricing fw-bold"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',')%> a day</p>
                 </div>
               </div>
             <% end %>
