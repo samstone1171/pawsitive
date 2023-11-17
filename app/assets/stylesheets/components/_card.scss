@@ -70,7 +70,6 @@
   padding: 20px;
   border: 1px solid rgb(230,230,230);
 }
-
 .account-card {
   width: 200px;
   border-radius: 3px;
@@ -88,4 +87,8 @@
   padding-top: 50px;
   padding-left:100px;
   border: 1px solid rgb(230,230,230);
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }

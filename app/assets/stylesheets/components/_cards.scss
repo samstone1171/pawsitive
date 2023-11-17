@@ -5,6 +5,25 @@
   flex-wrap: wrap;
 }
 
+#heroh4 {
+  margin: auto;
+  color: black;
+  h4 {
+    font-size: 30px;
+  }
+}
+
+.bigicon {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+#herop {
+  margin: auto;
+  color: rgb(66, 38, 12)65, 91, 42;
+  font-size: 20px;
+}
+
 @media(max-width: 900px) {
   .card {
     margin-bottom: 15px;
