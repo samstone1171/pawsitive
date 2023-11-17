@@ -28,7 +28,7 @@
   <div class="container">
     <div class="d-flex flex-column align-items-center account-profile-container card w-100 bg-white ">
       <h2> Your Account</h2>
-
+        <i class="fa-solid fa-gear"></i>
         <%= cl_image_tag @account.photo.key, class: "account-avatar-circle", crop: :fill, alt: "avatar-circle" %>
         <p></p>
         <p ><%= @account.first_name %> <%= @account.last_name %></p>
@@ -74,8 +74,11 @@
                 </div>
   --->
             <div class="pet-cards-container">
-              <%= link_to image_tag("plus_icon.jpg", class: 'd-block w-100'), new_pet_path  %>
-             </div>
+              <%= link_to image_tag("plus-icon.jpg", class: 'd-block w-100'), new_pet_path  %>
+            </div>
+            <div class="pet-cards-container">
+              <%= link_to image_tag("minus-icon.jpg", class: 'd-block w-100'), new_pet_path  %>
+            </div>
             </div>
         </div>
         </div>

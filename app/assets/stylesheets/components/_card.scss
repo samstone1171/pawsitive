@@ -107,11 +107,20 @@ a {
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: left;
   padding-top: 50px;
-  padding-left: 90px;
+  padding-left: 82px;
+  padding-right: 20px;
+  padding-bottom: 10px;
   border: 1px solid rgb(230,230,230);
 }
 .details {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.fa-gear {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
 }
