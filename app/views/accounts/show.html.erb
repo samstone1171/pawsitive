@@ -3,16 +3,16 @@
 <%= cl_image_tag @account.photo.key, class: "bg-pawsitive-orange pet-cards" %>
 --->
 
- <h1 class="text-center m-4"> Hello <%=@account.first_name%> </h1>
+ <h1 class="text-center m-4"> Hello, <%=@account.first_name%>! </h1>
 
   <!-- Notification --->
 <div class="container">
 <div class="notification-container mb-5 notification-card w-100 bg-white">
-<div >
+<div class="">
     <% if @rentals.find_by(status: 'waiting')%>
-      <p class="text-center m-4"> [notification ]You have paw requests <i class="fa-solid fa-bell"></i> </p>
+      <p class="text-center text-success m-4 pe-5"> [notification] You have paw requests! <i class="fa-solid fa-bell"></i> </p>
     <% else %>
-        <p class="text-center m-4"> [notification ]You have no paw requests currently... <i class="fa-solid fa-bell"></i> </p>
+        <p class="text-center m-4"> [notification] You currently have no paw requests... <i class="fa-solid fa-bell"></i> </p>
     <% end %>
   <% @rentals.each do |rental| %>
       <% if rental.status == "waiting" %>
@@ -27,10 +27,10 @@
   <div class="col-4">
   <div class="container">
     <div class="d-flex flex-column align-items-center account-profile-container card w-100 bg-white ">
-      <h2> Your account</h2>
+      <h2> Your Account</h2>
 
         <%= cl_image_tag @account.photo.key, class: "account-avatar-circle", crop: :fill, alt: "avatar-circle" %>
-
+        <p></p>
         <p ><%= @account.first_name %> <%= @account.last_name %></p>
         <p><%= @account.email %></p>
 
@@ -47,7 +47,7 @@
 
     <div class  ="details-container-profile mb-3 bg-white">
         <div class="container account-pets-container">
-        <h2>Your lovely pets</h2>
+        <h2>Your lovely pets:</h2>
         <div class="bg-pawsitive-orange pet-cards"><% @pets.each do |pet| %>
 
   <!-- Current having pets--->
