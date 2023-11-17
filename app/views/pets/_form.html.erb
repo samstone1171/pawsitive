@@ -9,7 +9,7 @@
     <%= f.input :photo, as: :file %>
     <%= f.input :gender, as: :check_boxes, collection: [ ['female', 'F'], ['male', 'M'] ], include_blank: false, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
     <%= f.input :size, as: :check_boxes, collection: ['Extra Small', 'Small', 'Medium','Large', 'Extra Large'], include_blank: false, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
-    <%= f.input :life_stage, as: :check_boxes, collection: ['Adult', 'Young', 'Elder', 'Baby'], include_blank: false, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+    <%= f.input :life_stage, as: :check_boxes, collection: ['Baby', 'Young', 'Adult', 'Elder'], include_blank: false, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
 
     <div class="d-flex justify-content-center">
       <%= f.submit "Add a Pet", class: "btn-primary btn-explore " %>
