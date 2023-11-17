@@ -13,6 +13,11 @@
   color: #1EDD88;
 }
 
+.btn-explore {
+  position: absolute;
+  left: 19%;
+}
+
 .btn-explore:hover {
   background-color: #4a37b8;
   transition-duration: .5s;
@@ -25,4 +30,9 @@
 .home-button:hover {
   background-color: #4a37b8;
   transition-duration: .5s;
+}
+
+#search-btn {
+  height: 50%;
+  line-height: 0;
 }

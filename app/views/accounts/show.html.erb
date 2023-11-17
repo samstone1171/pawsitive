@@ -24,8 +24,13 @@
  <div class="row">
   <!-- Account details --->
   <div class="col-4">
+
     <div class=".account-profile-container card w-100 h-100 mb-3 ">
       <h2> your account details </h2>
+
+    <div class=".account-profile-container card w-100">
+      <h2> Your account details: </h2>
+
         <%= cl_image_tag @account.photo.key, class: "account-avatar-square", alt: "avatar-square" %>
         <p><%= @account.first_name %></p>
         <p><%= @account.last_name %></p>
@@ -50,7 +55,7 @@
                     <h2><%= pet.name %></h2>
                     <p><%= pet.life_stage %> <%= pet.species %></p>
                   </div>
-                <p class="card-pet-pricing">¥<%= pet.price_per_day %> per day</p>
+                <p class="card-pet-pricing"><%= number_to_currency(pet.price_per_day, unit: '¥', precision: 0, delimiter: ',')%> per day</p>
                 </div>
               </div>
             <% end %>

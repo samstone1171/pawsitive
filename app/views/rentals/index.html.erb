@@ -1,52 +1,50 @@
+<div class="container pets-index-container">
+  <h2 class="mt-4 mb-3 center">Your Rental History</h2>
 
-
-
-
-<h2 class="mt-4 mb-3 center">Your Rental History</h2>
-
-<div class="row justify-content-center">
-  <div class="col-sm-6 my-3">
-    <%= form_with url: rentals_path, method: :get do %>
-      <div class="d-flex">
-        <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Type a pet name"
-          %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-      </div>
-      <label>Waiting</label><%= radio_button_tag 'status', 'waiting' %>
-      <label>Approved</label><%= radio_button_tag 'status', 'accepted'%>
-      <label>Declined</label><%= radio_button_tag 'status', 'declined'%>
-    <% end %>
-  </div>
-</div>
-
-
-<div class="bg-pawsitive-orange pet-cards mb-5"><% @rentals.each do |rental| %>
-
-    <%= link_to account_path(rental) do %>
-      <div class="pet-cards-container">
-        <div class="card-category" style="background-image: url('<%= cl_image_path rental.pet.photo.key, crop: :thumb %>');">
+  <div class="row justify-content-center">
+    <div class="col-sm-6 my-3">
+      <%= form_with url: rentals_path, method: :get do %>
+        <div class="d-flex">
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Type a pet name"
+            %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
         </div>
-        <div class="card-pet-infos d-flex">
-          <div class="card-pet-desc">
-            <h2><%= rental.pet.name %></h2>
-            <div class="rental-status">
-              <% if rental.status == 'waiting'%>
-                <p class="rental-status mt-1 rental-status-waiting"><%= (rental.status) %>... </p>
-              <% elsif rental.status == 'accepted'%>
-                <p class="rental-status mt-1 rental-status-approved"><%= (rental.status) %>! </p>
-              <% else  %>
-                <p class="rental-status mt-1 rental-status-declined"><%= (rental.status) %> </p>
-              <% end %>
-            </div>
-            <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
+        <label>Waiting</label><%= radio_button_tag 'status', 'waiting' %>
+        <label>Approved</label><%= radio_button_tag 'status', 'accepted'%>
+        <label>Declined</label><%= radio_button_tag 'status', 'declined'%>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="bg-pawsitive-orange pet-cards mb-5"><% @rentals.each do |rental| %>
+
+      <%= link_to account_path(rental) do %>
+        <div class="pet-cards-container">
+          <div class="card-category" style="background-image: url('<%= cl_image_path rental.pet.photo.key, crop: :thumb %>');">
           </div>
-        <p class="card-pet-pricing">¥<%= rental.pet.price_per_day %> total</p>
-        <%= cl_image_tag rental.renter.photo.key, class: "card-pet-user avatar-bordered"%>
+          <div class="card-pet-infos d-flex">
+            <div class="card-pet-desc">
+              <h2><%= rental.pet.name %></h2>
+              <div class="rental-status">
+                <% if rental.status == 'waiting'%>
+                  <p class="rental-status mt-1 rental-status-waiting"><%= (rental.status) %>... </p>
+                <% elsif rental.status == 'accepted'%>
+                  <p class="rental-status mt-1 rental-status-approved"><%= (rental.status) %>! </p>
+                <% else  %>
+                  <p class="rental-status mt-1 rental-status-declined"><%= (rental.status) %> </p>
+                <% end %>
+              </div>
+              <p class="fa fa-calendar"> <%= rental.start_date %>  -  <%= rental.end_date %></p>
+            </div>
+          <p class="card-pet-pricing"><%= number_to_currency(rental.total_price, unit: '¥', precision: 0, delimiter: ',') %> total</p>
+          <%= cl_image_tag rental.renter.photo.key, class: "card-pet-user avatar-bordered"%>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-  </div>
+    </div>
+</div>

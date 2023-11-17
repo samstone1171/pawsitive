@@ -26,7 +26,7 @@ class RentalsController < ApplicationController
 
     if @rental.save
       flash[:notice] = "Request has been made!"
-      redirect_to pet_path(@pet)
+      redirect_to rentals_path
     else
       render "pets/show", status: :unprocessable_entity
     end
